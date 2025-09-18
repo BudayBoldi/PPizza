@@ -14,9 +14,11 @@ h1, h3 {
 	margin-bottom: 0px;
 }
 #mbox {
+	height: 100%;
 	width: 25%;
 	background-color: darkred;
 	padding-left: 5%;
+	overflow: scroll;
 }
 #btn, #txt, #nev {
 	font-size: xx-large;
