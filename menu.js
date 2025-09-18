@@ -10,10 +10,15 @@ for(var i = 0; i < foods.length; i++) {
 	var names = food.getElementsByTagName("name");
 	var descs = food.getElementsByTagName("description");
 	for(var j = 0; j < names.length; j++) {
-		let opt = document.createElement("option");
-		opt.value = names[j].textContent;
-		dlist.appendChild(opt);
-		document.write("<h1 style='margin-top:" + j + "em'>" + names[j].textContent + "</h1>");
-		document.write("<h3>" + descs[j].childNodes[0].nodeValue + "</h3>");
+		if(j != 0){
+		  let opt = document.createElement("option");
+		  opt.value = names[j].textContent;
+		  dlist.appendChild(opt);
+		  document.write("<h1 style='margin-top: 10%'>" + names[j].textContent + "</h1>");
+		  document.write("<h3>" + descs[j].childNodes[0].nodeValue + "</h3>");
+		} else {
+			document.write("<h1 style='margin-top:" + j + "%'>" + names[j].textContent + "</h1>");
+			document.write("<h3>" + descs[j].childNodes[0].nodeValue + "</h3>");
+		}
 	}
 }
